@@ -2,7 +2,7 @@ from flask import Flask
 app = Flask(__name__)
 @app.route("/")
 def home():
-  return ""
+  return """
   <html>
 	<head>
   <title>My docker demo website</title>
@@ -12,5 +12,6 @@ def home():
   <p>Hello! this website is runnig inside a docker container on azure</p>
   </body>
   </html>
+	"""
   if __name__ "__main__":
     app.run(host = "0.0.0.0", port = 8000)
